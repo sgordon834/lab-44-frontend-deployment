@@ -7,7 +7,6 @@ class Home extends React.Component {
         return (
             <div>
                 <h2>Home</h2>
-                <p>API: {__API_URL__}</p>
             </div>
         )
 

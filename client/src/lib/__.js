@@ -4,16 +4,6 @@ export const activeProps = (config) => Object.keys(config).filter( key => config
 
 export const renderIf = (test, componentTrue, compoentFalse=null) => test ? componentTrue : compoentFalse;
 
-export const photoToDataUrl = file => {
-  return new Promise((resolve, reject) =>{
-    let reader = new FileReader();
-    reader.addEventListener('load', () => resolve(reader.result));
-    reader.addEventListener('error', () => reject(reader.error));
-    return file ? reader.readAsDataURL(file) : reject(new Error('USAGE ERROR: requires file'));
-  })
-}
-
-
 export const fetchData = (url) => {
 
     return getCache(url)
